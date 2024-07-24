@@ -30,6 +30,17 @@ public class Main {
         System.out.println("Double Min Value "+Double.MIN_VALUE);
         System.out.println("Double Max Value "+Double.MAX_VALUE);
 
+        int age = 10;
+        int myage = 10;
+        int myAge = 10;
+        int _age = 10;
+        int 2age = 10; //Error
+        int my age = 10;// Error
+        int my_age = 10;
+        int my2age = 10;
+        int #age = 10; // Error
+        int age1 = 10;
+
 
     }
 }
