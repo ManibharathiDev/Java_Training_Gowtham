@@ -34,11 +34,11 @@ public class Main {
         int myage = 10;
         int myAge = 10;
         int _age = 10;
-        int 2age = 10; //Error
-        int my age = 10;// Error
+        //int 2age = 10; //Error
+       // int my age = 10;// Error
         int my_age = 10;
         int my2age = 10;
-        int #age = 10; // Error
+        //int #age = 10; // Error
         int age1 = 10;
 
 
