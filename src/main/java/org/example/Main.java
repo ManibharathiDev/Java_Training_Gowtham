@@ -3,8 +3,109 @@ package org.example;
 public class Main {
     public static void main(String[] args)
     {
+
+        //Ternary or Conditional Operator
+        int a = 10;
+        int b = 50;
+        // Find the greatest number between two numbers
+        int res = (a>b)?a:b;
+        System.out.println("The greatest number is "+res);
+
+        String resultss = (a>b)?"A is greatest number":"B is greatest number";
+        System.out.println(resultss);
+
+        // Relational Operator
+        boolean result = 10<5;
+        System.out.println(result);
+        result = 10>5;
+        System.out.println(result);
+        result = 10<=5;
+        System.out.println(result);
+        result = 10<=15;
+        System.out.println(result);
+        result = 10!=15;
+        System.out.println(result);
+        result = 10==15;
+        System.out.println(result);
+        result = 10==10;
+        System.out.println(result);
+
+
+        //Task 1
+        /*int myNumber = 10;
+        int yourNumber = 20;
+        System.out.println("Before Swapping");
+        System.out.println("My Number =>"+myNumber);
+        System.out.println("Your Number =>"+yourNumber);
+
+        // Using Arithmetic operatos + -
+
+        // Using Temp variable
+
+        /*int temp = myNumber;
+        myNumber = yourNumber;
+        yourNumber = temp;
+
+        System.out.println("After Swapping");
+        System.out.println("My Number =>"+myNumber);
+        System.out.println("Your Number =>"+yourNumber);*/
+
+        // Single Line Swapping
+
+        //myNumber = (myNumber+yourNumber)-(yourNumber = myNumber);
+        /*myNumber = (myNumber*yourNumber)/(yourNumber=myNumber);
+
+        System.out.println("After Swapping");
+        System.out.println("My Number =>"+myNumber);
+        System.out.println("Your Number =>"+yourNumber);*/
+
+        //Operators
+       /* int fNumber = 10;
+        int sNumber = 20;
+        int addition = fNumber + sNumber; // Addition Operator +
+        int subtraction = sNumber - fNumber; // Subtraction -
+        int multiplication = sNumber * fNumber; // Multiplcation *
+        int division = sNumber/fNumber; // Division /
+
+        int remainder = fNumber%12;
+        System.out.println("Remainder is "+remainder);*/
+
+
+
+
+        // Type Casting
+       /* byte a = 127;
+        // Implicit Type Converstion
+        short c = a;
+
+        int b = a;
+
+        System.out.println("A is "+a);
+        System.out.println("B is "+b);
+
+        int age = 25;
+        //Explicit Conversion
+        byte myAge = (byte)age;
+
+        short my_age = (short) age;
+
+        System.out.println("My age is "+myAge);
+
+
+        int firstNumber = Integer.MAX_VALUE;
+        int secondNumber = Integer.MAX_VALUE;
+        //Explicit Type Conversion
+        long result = (long)firstNumber + (long)secondNumber;
+
+        System.out.println("Result is ="+result);
+
+
+
+
+
+
         // Variables & Data Types - Ranges
-        byte a = 10;
+        /*byte a = 10;
 
         System.out.println("Byte Min Value "+Byte.MIN_VALUE);
         System.out.println("Byte Max Value "+Byte.MAX_VALUE);
@@ -39,7 +140,7 @@ public class Main {
         int my_age = 10;
         int my2age = 10;
         //int #age = 10; // Error
-        int age1 = 10;
+        int age1 = 10;*/
 
 
     }
