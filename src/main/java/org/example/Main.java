@@ -1,9 +1,60 @@
 package org.example;
 
 public class Main {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
+        // Logical Operators
+        /**
+         * && -> Logical And
+         * || -> Logical Or
+         * a&&b =>
+         * true && true => true
+         * true && false => false
+         * false && false => false
+         * true || true => true
+         * true || false => true
+         * false || false => false
+         */
 
+        //boolean result = true && true;
+        boolean result = (10 > 5) && (10 > 12);
+        System.out.println(result);
+        result = (10 > 5) && (10 > 4);
+        System.out.println(result);
+
+        result = (10 < 12) || (12 > 90);
+        System.out.println(result);
+        result = (10 < 8) || (12 > 90);
+        System.out.println(result);
+
+        // Find the greatest number between three numbers using ternary operators
+
+        int a = 51000;
+        int b = 15000;
+        int c = 1900000;
+        int d = 100000;
+
+        String greatestNumber = (a > b && a > c) ? "A" : ((b > c) ? "B" : "C");
+        System.out.println(greatestNumber);
+
+        // Find the greatest number b/w four numbers using ternary operators;
+       // greatestNumber = (a>b&&a>c)?"a":(c>b&&c>d)?"c":(b>d)?"b":"d";
+
+        greatestNumber = (a > b && a > c && a > d)?"A":(b>c && b > d)? "B":(c > d) ? "C":"D";
+        System.out.println(greatestNumber);
+
+        // Check the given number is odd or even number
+        // 12 : Even
+        // 9 : Odd
+        // 2 4 6 8 10 12 14 16 18 ...... 100 ..... => All numbers divided by 2 perfect
+        // 1 3 5 7 9....... 99 .....
+
+        int num = 11;
+        num=num%2;
+        String oddOrEven =(num==0)?"even":"odd";
+        System.out.println(oddOrEven);
+
+
+        /*
         //Ternary or Conditional Operator
         int a = 10;
         int b = 50;
@@ -69,8 +120,6 @@ public class Main {
 
         int remainder = fNumber%12;
         System.out.println("Remainder is "+remainder);*/
-
-
 
 
         // Type Casting
