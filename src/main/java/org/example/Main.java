@@ -20,12 +20,45 @@ public class Main {
         System.out.println("C "+c);  // 7
         System.out.println("D "+d);  // 6*/
 
-        int a = 10;
+        /*int a = 10;
         int b = a++ + a++; // 21 // a => 12
         int c = a++ + b++; // 12+21 => 33 // a=>13, b=> 22
         System.out.println("A "+a); // 13;
         System.out.println("B "+b); // 22
         System.out.println("C "+c); // 33
+         */
+
+        /*int a = 10;
+        int b = ++a;
+        System.out.println("A "+a);
+        System.out.println("B "+b);*/
+
+        /*int a = 10;
+        int b = ++a + ++a;
+        System.out.println("A "+a);
+        System.out.println("B "+b);*/
+
+        /*int a = 10;
+        int b = a++ + ++a;
+        System.out.println("A "+a);
+        System.out.println("B "+b);*/
+
+
+
+        int a = 10;
+        int b = a++ + a++;
+        int c = ++b + a++ + ++b;
+        System.out.println("A "+a); // 12
+        System.out.println("B "+b); // 23
+        System.out.println("C "+c); // 57
+
+        // Arithmetic
+        // Assignment
+        // Incre/decre
+        // Logical
+        // Relational
+        // Conditional Operator
+        // Bitwise - Number System (Case Study) Binary, Decimal, Octal, Hexa Decimal
 
     }
 }
