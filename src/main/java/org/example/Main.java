@@ -2,63 +2,57 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        //int a = 10;
-        //a++; // Post Increment operand++
-        //++a; // Pre Increment ++Operand
+        /*String role = "user";
+        if(role.equals("admin"))
+        {
+            System.out.println("I am admin");
+        }
+        System.out.println("I am not a admin");*/
 
-
-        /*int b = a++; // Post Increment Operator
-        int c = ++a; // Pre Increment Operator
-        System.out.println("A "+a); // 12
-        System.out.println("B "+b); // 10
-        System.out.println("C "+c); // 12*/
-
-       /* int a = 5;
-        int c = ++a;
-        int d = c++;
-        System.out.println("A "+a);  // 6
-        System.out.println("C "+c);  // 7
-        System.out.println("D "+d);  // 6*/
+        // Check if the given number is odd number? if it is odd number display "odd"
 
         /*int a = 10;
-        int b = a++ + a++; // 21 // a => 12
-        int c = a++ + b++; // 12+21 => 33 // a=>13, b=> 22
-        System.out.println("A "+a); // 13;
-        System.out.println("B "+b); // 22
-        System.out.println("C "+c); // 33
-         */
+        int remainder = a%2;
+        if(remainder != 0)
+        {
+            System.out.println("ODD");
+        }
+        else{
+            System.out.println("EVEN");
+        }*/
 
-        /*int a = 10;
-        int b = ++a;
-        System.out.println("A "+a);
-        System.out.println("B "+b);*/
-
-        /*int a = 10;
-        int b = ++a + ++a;
-        System.out.println("A "+a);
-        System.out.println("B "+b);*/
-
-        /*int a = 10;
-        int b = a++ + ++a;
-        System.out.println("A "+a);
-        System.out.println("B "+b);*/
-
-
+        // Find the greatest number b/w two numbers
+        // a = 10; b = 5
 
         int a = 10;
-        int b = a++ + a++;
-        int c = ++b + a++ + ++b;
-        System.out.println("A "+a); // 12
-        System.out.println("B "+b); // 23
-        System.out.println("C "+c); // 57
+        int b = 15;
+        int c = 6;
+        /*if(a>b){
+            System.out.println("A is greater");
+        }
+        else
+        {
+            System.out.println("B is greater");
+        }*/
 
-        // Arithmetic
-        // Assignment
-        // Incre/decre
-        // Logical
-        // Relational
-        // Conditional Operator
-        // Bitwise - Number System (Case Study) Binary, Decimal, Octal, Hexa Decimal
+        if(a>b && a>c){
+            System.out.println("A is greater");
+        }
+        else if(b>c)
+        {
+            System.out.println("B is greater");
+        }
+        else
+        {
+            System.out.println("c is greater");
+        }
+
+        // Try with Four Numbers
+        // Make grade systems
+        // >90 S
+        // >80 <90 A
+
+
 
     }
 }
