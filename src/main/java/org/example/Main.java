@@ -2,56 +2,52 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        /*String role = "user";
-        if(role.equals("admin"))
+        // Print 1 to 10 Numbers
+        for(int i = 1; i<=10; i++)
         {
-            System.out.println("I am admin");
+            System.out.println(i);
         }
-        System.out.println("I am not a admin");*/
 
-        // Check if the given number is odd number? if it is odd number display "odd"
 
-        /*int a = 10;
-        int remainder = a%2;
-        if(remainder != 0)
+        /**\
+         1
+         22
+         333
+         4444
+         55555
+         */
+
+        for(int i = 1; i<=5000;i++)
         {
-            System.out.println("ODD");
-        }
-        else{
-            System.out.println("EVEN");
-        }*/
-
-        // Find the greatest number b/w two numbers
-        // a = 10; b = 5
-
-        int a = 10;
-        int b = 15;
-        int c = 6;
-        /*if(a>b){
-            System.out.println("A is greater");
-        }
-        else
-        {
-            System.out.println("B is greater");
-        }*/
-
-        if(a>b && a>c){
-            System.out.println("A is greater");
-        }
-        else if(b>c)
-        {
-            System.out.println("B is greater");
-        }
-        else
-        {
-            System.out.println("c is greater");
+            for(int j = 1; j<=i;j++)
+            {
+                System.out.print(i);
+            }
+            System.out.println("");
         }
 
-        // Try with Four Numbers
-        // Make grade systems
-        // >90 S
-        // >80 <90 A
+        //Outer Loop : 5
+        // Inner Loop : 1+2+3+4+5 = 15 =? 20 times
+        // DSA => Data Structures & Algorithm
+        // Running time and Space Big O.
 
+        /**
+
+         *
+         * *
+         * * *
+         * * * *
+         * * * * *
+
+         -----------------
+
+         1
+         1 2
+         1 2 3
+         1 2 3 4
+         1 2 3 4 5
+
+         */
 
 
     }
