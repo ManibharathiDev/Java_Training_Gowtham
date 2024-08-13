@@ -2,69 +2,42 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-
-        // break,continue
-        //int c = 5;
-        for(int i = 0; i < 10; i++)
+        int[] a= {10,20,30,40,50};
+        int sum = 0;
+        for(int i = 0; i< a.length;i++)
         {
-            int result = i*i;
-            if(result == 25)
-            {
-                //break; // It stops immediately with current block
-                continue; // It skips current iteration
-            }
-            System.out.println(result);
+            sum = sum+a[i];
+        }
+        System.out.println(sum);
+
+        for(int i=1;i<5;i++)
+        {
+            a[0]=a[0]+a[i];
+        }
+        System.out.println(a[0]);
+
+        // Print only Even number in the given array
+        //Input : {3,4,5,7,8,9,10,24,56,89,900,123}
+
+
+//        int[] a = new int[5];
+//        a[0] = 20;
+//        a[1] = 30;
+//        a[2] = 40;
+//        a[3] = 50;
+//        a[4] = 60;
+        //System.out.println(a.length);
+        //System.out.println(a[2]);
+
+        int[] b = {34,56,78,90};
+        //System.out.println(b[3]);
+
+        for(int i = 0; i<a.length; i++)
+        {
+           // System.out.println(a[i]);
         }
 
-        /*for(;;)
-        {
-            for(;;)
-            {
-                if(cond)
-                {
-                    break;
-                }
-            }
-        }*/
+        // Tastk 1: Sum of array
 
-
-
-
-        int b = 9%2;
-        switch(b)
-        {
-            case 0:
-                System.out.println("Even Number");
-                break;
-            case 1:
-                System.out.println("Odd Number");
-                break;
-        }
-
-        int a = 3;
-        switch (a)
-        {
-            case 1,2,3:
-                System.out.println("1");
-                break;
-            /*case 2:
-                System.out.println("2");
-                break;
-            case 3:
-                System.out.println("3");
-                break;*/
-            case 4:
-                System.out.println("4");
-                break;
-            case 5:
-                System.out.println("5");
-                break;
-            case 6:
-                System.out.println("6");
-                break;
-            default:
-                System.out.println("Out of range");
-                //break; // Optional
-        }
     }
 }
