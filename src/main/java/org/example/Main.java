@@ -2,42 +2,86 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        int[] a= {10,20,30,40,50};
-        int sum = 0;
-        for(int i = 0; i< a.length;i++)
+        // Find the Maximum in the given array
+        int[] a = {350,670,89,12,56,90,23,11,10,5};
+        /*int max = a[0];
+        for(int i = 1; i<a.length;i++)
         {
-            sum = sum+a[i];
-        }
-        System.out.println(sum);
-
-        for(int i=1;i<5;i++)
+            if(a[i]>max)
+            {
+                max = a[i];
+            }
+        }*/
+        int max = Integer.MIN_VALUE;
+        for(int i = 0; i<a.length;i++)
         {
-            a[0]=a[0]+a[i];
+            if(a[i]>max)
+            {
+                max = a[i];
+            }
         }
-        System.out.println(a[0]);
+        System.out.println("Maximum number is "+max);
 
-        // Print only Even number in the given array
-        //Input : {3,4,5,7,8,9,10,24,56,89,900,123}
+        //Find the minimum
+        int min = a[0];
+        for (int i = 1; i <a.length; i++) {
+            if(min>a[i]){
+                min=a[i];
+            }
+        }
+        System.out.println("Minimum number is "+min);
 
-
-//        int[] a = new int[5];
-//        a[0] = 20;
-//        a[1] = 30;
-//        a[2] = 40;
-//        a[3] = 50;
-//        a[4] = 60;
-        //System.out.println(a.length);
-        //System.out.println(a[2]);
-
-        int[] b = {34,56,78,90};
-        //System.out.println(b[3]);
-
-        for(int i = 0; i<a.length; i++)
+        //Copy Array
+        int[] b = new int[a.length];
+        for(int i = 0; i< a.length; i++)
         {
-           // System.out.println(a[i]);
+            b[i] = a[i];
         }
 
-        // Tastk 1: Sum of array
+        // Right Max
+        /**
+         {2,3,6,4,5,6,7,8}
+         {2,5,11,15,20,26,33,41}
+         r[0] = a[0];
+         r[1] = r[0]+a[1];
+         r[2] = r[1]+a[2];
+         r[3] = r[2]+a[3];
+
+
+         r[n] = r[n-1]+a[n];
+
+         r[index] = r[index-1]+a[index];
+         */
+        int[] rMax = new int[a.length];
+        rMax[0] = a[0];
+        for(int i = 1;i<a.length;i++)
+        {
+            rMax[i] = rMax[i-1]+a[i];
+        }
+
+        System.out.println("Right Max");
+        for(int i = 0; i<rMax.length; i++)
+        {
+            System.out.println(rMax[i]);
+        }
+
+        // Left Max
+        int[] lMax = new int[a.length];
+        lMax[a.length-1] = a[a.length-1];
+
+        for(int i = a.length-2;i>=0;i--)
+        {
+            lMax[i] = lMax[i+1]+a[i];
+        }
+
+        System.out.println("Left Max");
+        for(int i = 0; i<lMax.length; i++)
+        {
+            System.out.println(lMax[i]);
+        }
+
+        //Task :
+        // Sum of Right Max with Left Max
 
     }
 }
