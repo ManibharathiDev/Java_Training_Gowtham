@@ -2,74 +2,100 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        //2D Array Declaration
-//        int[][] a = new int[size_row][size_column];
-        int[][] a = new int[4][4];
-        a[0][0] = 1;
-        a[0][1] = 2;
-        a[0][2] = 3;
-        a[0][3] = 4;
 
-        a[1][0] = 1;
-        a[1][1] = 2;
-        a[1][2] = 3;
-        a[1][3] = 4;
+        /*int a = 10;
+        int b = 20;
+        int c = 0;
+        System.out.println("Addition is ");
+        c = a+b;
+        System.out.println("Result is "+c);
 
-        a[2][0] = 1;
-        a[2][1] = 2;
-        a[2][2] = 3;
-        a[2][3] = 4;
+        a = 30;
+        b = 35;
+        c = a+b;
+        System.out.println("Result is "+c);
 
-        a[3][0] = 1;
-        a[3][1] = 2;
-        a[3][2] = 3;
-        a[3][3] = 4;
+        a = 40;
+        b = 35;
+        c = a+b;
+        System.out.println("Result is "+c);
 
-        for(int i = 0; i<4;i++)
-        {
-            for(int j = 0; j<4;j++)
-            {
-                System.out.print(a[i][j]+" ");
-            }
-            System.out.println(" ");
-        }
-
-
-        int sum = 0;
-        //Task 1: Sum of the Array
-        for (int i=0;i<a.length;i++){
-            for(int j=0;j<a[i].length;j++){
-                sum=sum+a[i][j];
-            }
-
-        }
-        System.out.println("Sum of array: ");
-        System.out.println(sum);
-        // Sum of Rows
-
-        int rsum = 0;
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a[i].length; j++) {
-                rsum=rsum+a[i][j];
-            }
-            System.out.println(rsum);
-            rsum=0;
-        }
-        // Sum of the diagonal
-
-        int dsum = 0;
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j <a[i].length; j++) {
-                // i<j Upper Triangle
-                //Lower Triange
-                if(i > j)
-                {
-                    dsum = dsum+a[i][j];
-                }
-
-            }
-        }
-        System.out.println(dsum);
+         */
+        /*addition();
+        addition();
+        addition();
+        subtraction();*/
+        /*add(10,20);
+        add(10,20,30);
+        add(10.5f,10);*/
+        int result = add_values();
+        System.out.println(result);
 
     }
+
+    /**
+     * No Return Type, No Arguments
+     */
+    static void addition()
+    {
+        int a = 40;
+        int b = 35;
+        int c = a+b;
+        System.out.println("Result is "+c);
+        //addition(); Function call by itself-> Recursive
+        //subtraction();
+    }
+
+    /**
+     * No Return Type, No Arguments
+     */
+    static void subtraction()
+    {
+        int a = 45;
+        int b = 65;
+        int c = a-b;
+        System.out.println(c);
+    }
+
+    /**
+     * No Return Type, With Arguments
+     */
+
+    static void add(int a, int b)
+    {
+        int c = a+b;
+        System.out.println(c);
+    }
+
+    // Function Overloading
+    // Same Function name but different arguments
+    static void add(int a, int b, int c)
+    {
+        int d = a+b+c;
+        System.out.println(d);
+    }
+
+    static void add(float a, int b){
+        float c = a+b;
+        System.out.println(c);
+    }
+
+
+    /*static return_type function_name() // int,float,double,string,character,boolean, object
+    {
+        Logic here
+    }*/
+
+    /**
+     * With Return Type and No Arguments
+     * @return
+     */
+    static int add_values()
+    {
+        int a = 10;
+        int b = 20;
+        int c = a+b;
+        return c;
+    }
+
 }
