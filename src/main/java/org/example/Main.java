@@ -1,27 +1,43 @@
 package org.example;
 
 public class Main {
-    static int a = 20; // Global Variable
+
+    static int num = 1;
     public static void main(String[] args)
     {
-        //int a = 10; //Local Variable
-        int b = 20;
-        a = 35;
-
-        System.out.println(a);
-        //int result = a+b;
-        //System.out.println(result);
-        add();
-        printAdd(a);
+        //add();
+        //count();
+        fibonacci();
     }
 
-    private static void add(){
-        System.out.println(a); // Global Variable
-    }
-
-    private static void printAdd(int a)
+    private static void fibonacci()
     {
-        System.out.println(a); // Local Variable
+        int n1 = 0;
+        int n2 = 1;
+        int n3 = 0;
+        int count = 10;
+        for(int i = 0; i < count; i++)
+        {
+            n3 = n1+n2;
+            n1 = n2;
+            n2 = n3;
+            System.out.print(n3+" ");
+        }
     }
+
+    private static void count()
+    {
+        System.out.println(num);
+        num++;
+        if(num>10)
+            return;
+        count();
+    }
+
+    /*private static void add()
+    {
+        System.out.println("I am Good");
+        add();
+    }*/
 
 }
