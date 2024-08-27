@@ -5,39 +5,55 @@ public class Main {
     static int num = 1;
     public static void main(String[] args)
     {
-        //add();
-        //count();
-        fibonacci();
+        //print1toA(10);
+        //printAto1(10);
+
+        //fib(N) = fib(n-1)+fib(n-2)
+        int sum = add(5);
+        System.out.println("The sum is "+sum);
+
+        int facts = fact(5);
+        System.out.println(facts);
     }
 
-    private static void fibonacci()
-    {
-        int n1 = 0;
-        int n2 = 1;
-        int n3 = 0;
-        int count = 10;
-        for(int i = 0; i < count; i++)
-        {
-            n3 = n1+n2;
-            n1 = n2;
-            n2 = n3;
-            System.out.print(n3+" ");
+    static int fact(int a){
+        if (a==1){
+
+            return 1;
         }
+        return fact(a-1)*a;
+
     }
 
-    private static void count()
+    private static int add(int N)
     {
-        System.out.println(num);
-        num++;
-        if(num>10)
+        if(N == 1) // Base Condition
+        {
+            return 1;
+        }
+        return add(N-1)+N;
+    }
+
+    private static void printAto1(int N)
+    {
+        if(N == 1)
+        {
+            System.out.print(N+" ");
             return;
-        count();
+        }
+        System.out.print(N+" ");
+        print1toA(N-1);
+
     }
 
-    /*private static void add()
+    private static void print1toA(int N)
     {
-        System.out.println("I am Good");
-        add();
-    }*/
-
+        if(N == 1)
+        {
+            System.out.print(N+" ");
+            return;
+        }
+        print1toA(N-1);
+        System.out.print(N+" ");
+    }
 }
