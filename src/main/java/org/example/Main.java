@@ -9,12 +9,26 @@ public class Main {
         //printAto1(10);
 
         //fib(N) = fib(n-1)+fib(n-2)
-        int sum = add(5);
-        System.out.println("The sum is "+sum);
+        //int sum = add(5);
+        //System.out.println("The sum is "+sum);
 
-        int facts = fact(5);
-        System.out.println(facts);
+        //int facts = fact(5);
+        //System.out.println(facts);
+        int fibs = fib(5);
+        System.out.println(fibs);
     }
+
+    static int fib(int N)
+    {
+        //Base Condition
+        if(N <= 1)
+        {
+            return N;
+        }
+        return fib(N-1)+fib(N-2);
+    }
+
+
 
     static int fact(int a){
         if (a==1){
