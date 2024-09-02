@@ -3,71 +3,70 @@ package org.example;
 public class Main {
 
     static int num = 1;
-    public static void main(String[] args)
-    {
-        //print1toA(10);
-        //printAto1(10);
+    public static void main(String[] args) {
+        String name = "gowtham ";
 
-        //fib(N) = fib(n-1)+fib(n-2)
-        //int sum = add(5);
-        //System.out.println("The sum is "+sum);
+//        System.out.println("My Name is "+name);
+//        System.out.println(name.length()); // Built In Mehtod
 
-        //int facts = fact(5);
-        //System.out.println(facts);
-        int fibs = fib(5);
-        System.out.println(fibs);
-    }
-
-    static int fib(int N)
-    {
-        //Base Condition
-        if(N <= 1)
+        char[] names = name.toCharArray();
+        int j = 0;
+        for(int i = 0; i<names.length;i++)
         {
-            return N;
+            j++;
+            //System.out.println(names[i]);
         }
-        return fib(N-1)+fib(N-2);
-    }
 
+        //System.out.println(name.toCharArray()[0]);
+        // Find the length of string using own logic
+        //2. Print the reverse string
+        //charAt(index) => It returns the index character
+        String a = "MALAYALAMS";
 
-
-    static int fact(int a){
-        if (a==1){
-
-            return 1;
-        }
-        return fact(a-1)*a;
-
-    }
-
-    private static int add(int N)
-    {
-        if(N == 1) // Base Condition
+//        a = 10;
+//        a +=5;
+        String b = "";
+        for(int i = a.length()-1;i>=0;i--)
         {
-            return 1;
+            b += a.charAt(i);
+            //b.concat(String.valueOf(a.charAt(i)));
         }
-        return add(N-1)+N;
-    }
+//        System.out.print(b);
+//
+//        if(a.equals(b))
+//        {
+//            System.out.println("Strings are Palindrome");
+//        }
+//        else{
+//            System.out.println("Not a Palindrome");
+//        }
 
-    private static void printAto1(int N)
-    {
-        if(N == 1)
+        // while
+        boolean isPalindrome = true;
+        //int isPal = 1;
+        char[] pal = a.toCharArray();
+        int i = 0;
+        int k = pal.length-1;
+        while(i<pal.length && k>=0)
         {
-            System.out.print(N+" ");
-            return;
+            if(pal[i] != pal[k])
+            {
+                isPalindrome = false;
+               // isPal = 0;
+                break;
+            }
+            i++;
+            k--;
         }
-        System.out.print(N+" ");
-        print1toA(N-1);
-
-    }
-
-    private static void print1toA(int N)
-    {
-        if(N == 1)
+        if(isPalindrome)
         {
-            System.out.print(N+" ");
-            return;
+            System.out.println("Palindrome");
         }
-        print1toA(N-1);
-        System.out.print(N+" ");
+        else{
+            System.out.println("Not a Palindrome");
+        }
+
+
+
     }
 }
