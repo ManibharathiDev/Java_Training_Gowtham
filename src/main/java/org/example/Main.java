@@ -6,116 +6,51 @@ public class Main {
 
     static int num = 1;
     public static void main(String[] args) {
-       String s1 = "Gowtham";
-       String s2 = "Gowtham";
+        String s1 = "Gowtham"; // Strings are Immutable // Thread Safe
+        //s1 = s1+" Raj";
+        //System.out.println(s1);
+        concats(s1);
+        System.out.println(s1);
 
-       String name = new String("Gowtham");
+        //StringBuilder & StringBuffer
+        //Mutable
+        //StringBuilder Non Thread Safe, StringBuffer ThreadSafe
+        //Create Strign Builder
 
-       char[] ch = {'G','0','w','t','h','a','m'};
-       String charsString = new String(ch);
-       System.out.println(charsString);
+        StringBuilder sb = new StringBuilder("Gowtham");
+        System.out.println("String Builder "+sb);
+        sb.append(" Raj");
+        System.out.println("After Append "+sb);
 
-        /**
-         * Built In Functions
-         */
-        /**
-         * charAt(int index)
-         */
+        // Create String Buffer
+        StringBuffer sbr = new StringBuffer("Udayan");
+        System.out.println("String Buffer "+sbr);
+        sbr.append(" Kumar");
+        System.out.println("After Buffer Append "+sbr);
 
-        System.out.println(s1.charAt(2)); // It returns the 2nd index character
-        /**
-         * Length
-         */
-        System.out.println(s1.length());
+        //Conversion
+        //1.Convert String to String Builder and String Buffer
+        String name = "Manibharathi";
+        StringBuilder sbrs = new StringBuilder(name);
+        StringBuffer sbrss = new StringBuffer(name);
 
-        /**
-         * substring(int beginIndex,int endIndex);
-         */
+        //2. StringBuilder to String
+        StringBuilder sb2 = new StringBuilder("Coimbatore");
+        String sb3 = String.valueOf(sb2);
 
-        String s3 = "Hello World";
-        System.out.println(s3.substring(2));
-        System.out.println(s3.substring(2,7)); // (BeginIndex -> endIndex-1)
+        StringBuffer sbl2 = new StringBuffer("Nagercoil");
+        String sb4 = String.valueOf(sbl2);
 
-        /**
-         * contains
-         * Check if the string contains such string
-         * It returns true, if it is present, else returns false
-         */
+        //3. StringBuilder to StringBuffer(Vice-Versa)
+        StringBuilder s5 = new StringBuilder("Erode");
+        String s5String = String.valueOf(s5);
+        StringBuffer s6 = new StringBuffer(s5String);
 
-        String s4 = "Hello World";
-        boolean res = s4.contains("Worlds");
-        System.out.println(res);
-        if(s4.contains("Hello")){
-            System.out.println("Strings are available");
-        }
+    }
 
-        /**
-         * isEmpty()
-         */
-
-        String s5 = "sdfsdfdsf";
-        if(s5.isEmpty())
-        {
-            System.out.println("Invalid String");
-        }
-
-        /**
-         * concat(String newString)
-         * Join Strings
-         */
-        String s6 = "Udaya";
-        String s7 = "Kumar";
-        String s8 = s6.concat(s7);
-        s8 = s6.concat(" ").concat(s7);
-        System.out.println(s8);
-
-        /**
-         * replace(char oldChar,char newChar)
-         */
-
-        String s9 = "Hello World";
-        String s10 = s9.replace('W','L');
-        System.out.println(s10);
-        s10 = s9.replace("World","dear");
-        System.out.println(s10);
-
-        /**
-         * split(String regEx)
-         * Split to Array
-         */
-        String text = "Hello/World/My/Dear";
-        String[] textSplit = text.split("/");
-        for(int i = 0; i < textSplit.length; i++)
-        {
-            System.out.println(textSplit[i]);
-        }
-
-        /**
-         * indexOf()
-         */
-
-        String s11 = "Coimbatore";
-        int pos = s11.indexOf("o");
-        System.out.println("Position "+pos);
-
-        /**
-         * LowerCase & UpperCase
-         */
-        String s12 = "gowtham";
-        System.out.println(s12.toUpperCase());
-        s12 = "GOWTHAM";
-        System.out.println(s12.toLowerCase());
-
-        /**
-         * trim
-         * It removes first and Last spaces
-         */
-
-        String s13 = " GOWTHAM ";
-        System.out.println("Before Trim => "+s13.length());
-        String s14 = s13.trim();
-        System.out.println("Before Trim => "+s14.length());
-
-
+    private static void concats(String s2)
+    {
+        String s3 = "Hello "+s2;
+        System.out.println(s3);
     }
 }
