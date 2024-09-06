@@ -2,49 +2,53 @@ package org.example;
 
 import java.sql.SQLSyntaxErrorException;
 
-public class Main {
+public class Main{
 
     static int num = 1;
     public static void main(String[] args) {
-        String s1 = "Gowtham"; // Strings are Immutable // Thread Safe
-        //s1 = s1+" Raj";
-        //System.out.println(s1);
-        concats(s1);
-        System.out.println(s1);
+        System.out.println("Division");
+        //try-catch-finally(optional)
+        try{
+            int a = 5/0;
+        }
+        catch (ArithmeticException e)
+        {
+            System.out.println("Invalid arithmetic operation "+e.getMessage());
+        }
+        finally {
+            System.out.println("Divide");
+        }
 
-        //StringBuilder & StringBuffer
-        //Mutable
-        //StringBuilder Non Thread Safe, StringBuffer ThreadSafe
-        //Create Strign Builder
+        int[] a = {10,20,40};
+        //System.out.println(a[10]);
+        try{
+            System.out.println(a[6]);
+        }
+        catch (IndexOutOfBoundsException e)
+        {
+            System.out.println("Invalid Index");
+        }
 
-        StringBuilder sb = new StringBuilder("Gowtham");
-        System.out.println("String Builder "+sb);
-        sb.append(" Raj");
-        System.out.println("After Append "+sb);
+        String s3 = null;
+        try {
+            System.out.println(s3.length());
+        }
+        catch (NullPointerException e)
+        {
+            System.out.println("S3 is null ");
+        }
 
-        // Create String Buffer
-        StringBuffer sbr = new StringBuffer("Udayan");
-        System.out.println("String Buffer "+sbr);
-        sbr.append(" Kumar");
-        System.out.println("After Buffer Append "+sbr);
+        int first = 10;
+        int second = 0;
+        if(second == 0)
+        {
+            throw new RuntimeException("Divide by zero");
+        }
+        else
+        {
+        int result = first/second;
+        }
 
-        //Conversion
-        //1.Convert String to String Builder and String Buffer
-        String name = "Manibharathi";
-        StringBuilder sbrs = new StringBuilder(name);
-        StringBuffer sbrss = new StringBuffer(name);
-
-        //2. StringBuilder to String
-        StringBuilder sb2 = new StringBuilder("Coimbatore");
-        String sb3 = String.valueOf(sb2);
-
-        StringBuffer sbl2 = new StringBuffer("Nagercoil");
-        String sb4 = String.valueOf(sbl2);
-
-        //3. StringBuilder to StringBuffer(Vice-Versa)
-        StringBuilder s5 = new StringBuilder("Erode");
-        String s5String = String.valueOf(s5);
-        StringBuffer s6 = new StringBuffer(s5String);
 
     }
 
