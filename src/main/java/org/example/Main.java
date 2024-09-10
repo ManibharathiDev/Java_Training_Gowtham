@@ -3,58 +3,68 @@ package org.example;
 import java.sql.SQLSyntaxErrorException;
 
 public class Main{
-
-    static int num = 1;
     public static void main(String[] args) {
-        System.out.println("Division");
-        //try-catch-finally(optional)
-        try{
-            int a = 5/0;
-        }
-        catch (ArithmeticException e)
-        {
-            System.out.println("Invalid arithmetic operation "+e.getMessage());
-        }
-        finally {
-            System.out.println("Divide");
-        }
+        //Object
+        //ClassName objectName = new ClassName();
 
-        int[] a = {10,20,40};
-        //System.out.println(a[10]);
-        try{
-            System.out.println(a[6]);
-        }
-        catch (IndexOutOfBoundsException e)
-        {
-            System.out.println("Invalid Index");
-        }
+        Car car_1 = new Car();
+        car_1.setBrandName("Tata");
+        car_1.setChasisNumber(232);
+        car_1.setEngineCC(343);
+        System.out.println("Name of the car is "+car_1.getBrandName());
 
-        String s3 = null;
-        try {
-            System.out.println(s3.length());
-        }
-        catch (NullPointerException e)
-        {
-            System.out.println("S3 is null ");
-        }
+        //car_1.unLock();
+        //System.out.println("Number of Seats =>"+car_1.numberOfSeats);
+       // car_1.setBrandName("");
+        /*car_1.brandName = "TATA";
+        car_1.chasisNumber=33432;
+        car_1.engineCC = 35;
+        car_1.color = "Gray";
+        car_1.fuelType = "Petrol";
+        car_1.numberOfSeats = 5;*/
 
-        int first = 10;
-        int second = 0;
-        if(second == 0)
+        //System.out.println("Name of the Car "+car_1.brandName);
+
+//        car_1.unLock();
+//        car_1.lock();
+//        car_1.engineOn();
+//        car_1.engineOff();
+//
+//        Car car_2 = new Car();
+//        car_2.brandName = "Maruti";
+//        car_2.chasisNumber = 4353;
+//        car_2.engineCC = 67;
+//        car_2.color = "Red";
+//        car_2.fuelType = "Hybrid";
+//        car_2.numberOfSeats = 7;
+//
+//        System.out.println("Name of the Car "+car_2.brandName);
+//
+//        car_2.unLock();
+//        car_2.lock();
+//        car_2.engineOn();
+//        car_2.engineOff();
+
+        Bike bike = new Bike();
+        bike.setName("Honda CB Shine");
+        bike.setCityBike(false);
+        bike.setColor("Black");
+        bike.setChasisNumber(23432432);
+        bike.setCc(125);
+
+        System.out.println(bike.getName());
+        System.out.println("Color :"+bike.getColor());
+
+        if(bike.isCityBike())
         {
-            throw new RuntimeException("Divide by zero");
+            System.out.println(bike.getName()+" is city bike");
         }
         else
-        {
-        int result = first/second;
-        }
+            System.out.println(bike.getName()+" is not city bike");
 
+        //System.out.println("Is City Bike "+bike.isCityBike());
+        System.out.println("Chasis Number "+bike.getChasisNumber());
+        System.out.println("CC "+bike.getCc());
 
-    }
-
-    private static void concats(String s2)
-    {
-        String s3 = "Hello "+s2;
-        System.out.println(s3);
     }
 }
