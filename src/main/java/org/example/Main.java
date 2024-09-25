@@ -1,41 +1,60 @@
 package org.example;
 
 
+import java.util.ArrayList;
+
 public class Main{
     public static void main(String[] args) {
 
-        //We couldn't instantiate abstract class
-        //Car car = new Car();
+        ArrayList<Integer> age = new ArrayList<>();
+        ArrayList<String> name = new ArrayList<>();
 
-        //Abstract Class
-        Audi audi = new Audi();
-        audi.getBrand();
-        audi.setColor();
+        for(int i = 0; i<100;i++)
+        {
+            if(i == 49 || i == 68)
+            {
+                age.add(190); // Add New Value
+            }
+            else age.add(i+1);
+        }
+       //age.add(90);
+        //System.out.println("Age is "+age.get(100)); // Get - Index
 
-        Maruti maruti = new Maruti();
-        maruti.getBrand();
+        for(int i = 0; i<100;i++)
+        {
+            System.out.println("Age is "+age.get(i)); // Get - Index
+        }
 
-        Bike bike = new Honda();
-        bike.getBrand();
-        bike.getCC();
+        System.out.println("Size of array list "+age.size());
+        System.out.println(age.get(8)); // return a 8th position value
 
-        Bike bike1 = new Enfield();
-        bike1.getBrand();
+        if(age.contains(1900))
+        {
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
 
-        Honda honda = new Honda();
-        honda.getBrand();
+        //age.clear(); // Remove all values
+       // System.out.println("Size of array list "+age.size());
 
-        Calculation calculation = new Calculation();
-        calculation.add();
-        calculation.add(10,20);
+        System.out.println("Index of => "+age.indexOf(56));
 
-        Chemistry chemistry = new Chemistry();
-        chemistry.setFirstNumber(10);
-        chemistry.setSecondNumber(20);
-        System.out.println("First Number is "+chemistry.getFirstNumber());
-        System.out.println("Second Number is "+chemistry.getSecondNumber());
+//        if(age.size() == 0)
+//        {
+//
+//        }
+        if(age.isEmpty())
+        {
+            System.out.println("Empty");
+        }
+        else{
+            System.out.println("Not empty");
+        }
 
-        chemistry.add();
+        System.out.println(age.lastIndexOf(190));
+        age.remove(3); // remove
 
     }
 }
