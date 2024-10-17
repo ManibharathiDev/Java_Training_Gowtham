@@ -16,7 +16,7 @@ public class UpdateMain {
             String sql = "UPDATE users SET age = ? WHERE id = ?";
             PreparedStatement statement = con.prepareStatement(sql);
             statement.setInt(1, 35);
-            statement.setInt(2, 6);
+            statement.setInt(2, 11);
             statement.executeUpdate();
             System.out.println("Record updated.");
         } catch (SQLException e) {

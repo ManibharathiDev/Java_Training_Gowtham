@@ -10,9 +10,10 @@ public class ReadMain {
             Connection con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/grace_db", "root",
                     "manibharathi");
-            String sql = "SELECT * FROM users WHERE id = ?";
+            String sql = "SELECT * FROM users WHERE id = ? AND user_type = ?";
             PreparedStatement statement = con.prepareStatement(sql);
-            statement.setInt(1, 6);
+            statement.setInt(1, 7);
+            statement.setString(2,"ADMIN");
             ResultSet result = statement.executeQuery();
             if (result.next()) {
                 String name = result.getString("name");
@@ -22,6 +23,7 @@ public class ReadMain {
                 System.out.println("Email: " + email);
                 System.out.println("Age: " + age);
             }
+            con.close();
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

@@ -15,7 +15,7 @@ public class DeleteMain {
                     "manibharathi");
             String sql = "DELETE FROM users WHERE id = ?";
             PreparedStatement statement = con.prepareStatement(sql);
-            statement.setInt(1, 6);
+            statement.setInt(1, 11);
             statement.executeUpdate();
             System.out.println("Record deleted.");
         } catch (SQLException | ClassNotFoundException e) {

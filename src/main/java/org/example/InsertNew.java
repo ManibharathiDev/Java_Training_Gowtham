@@ -18,11 +18,11 @@ public class InsertNew {
                     "(`name`, `email`, `user_type`, `password`, `mobile`, `age`) " +
                     "VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement statement = con.prepareStatement(sql);
-            statement.setString(1, "Gilbert");
-            statement.setString(2, "gilbert@gmail.com");
-            statement.setString(3, "ADMIN");
+            statement.setString(1, "Gilberts");
+            statement.setString(2, "gilberts@gmail.com");
+            statement.setString(3, "EMPLOYEE");
             statement.setString(4, "123456");
-            statement.setString(5, "9955266459");
+            statement.setString(5, "9955266458");
             statement.setString(6, "27");
             statement.executeUpdate();
             System.out.println("Record created.");
